@@ -4,6 +4,13 @@
 
 This project detects drowsiness in real-time using a webcam. It tracks the user’s eyes and raises an audio alert when signs of sleepiness (prolonged eye closure) are detected. The system is built with OpenCV, dlib, and pyttsx3 for image processing, facial landmark detection, and audio alerts.
 
+### Download model file
+This project requires the pretrained dlib 68 face landmarks model.
+
+Download the file by searching
+#### shape_predictor_68_face_landmarks.dat 
+in google
+
 ### Working
 
 1. Video Capture
@@ -52,12 +59,7 @@ Install the following dependencies before running:
 
 ##### pip install opencv-python dlib scipy pyttsx3
 
-### Download model file
-This project requires the pretrained dlib 68 face landmarks model.
 
-Download the file by searching
-### shape_predictor_68_face_landmarks.dat 
-in google
 
 Download the file and save it in your project folder, then run the project.
 
