@@ -12,25 +12,30 @@ Download the file by searching **shape_predictor_68_face_landmarks.dat** in goog
 ### Working
 
 **1. Video Capture**
-	- The webcam captures live video using OpenCV.
+
+- The webcam captures live video using OpenCV.
 
 **2. Face & Eye Detection**
-	- dlib’s get_frontal_face_detector() detects faces.
-	- A pretrained model (shape_predictor_68_face_landmarks.dat) maps 68 facial landmarks.
-	- Eye regions are extracted (left eye: points 36–41, right eye: points 42–47).
+
+- dlib’s get_frontal_face_detector() detects faces.
+- A pretrained model (shape_predictor_68_face_landmarks.dat) maps 68 facial landmarks.
+- Eye regions are extracted (left eye: points 36–41, right eye: points 42–47).
 
 **3. Eye Aspect Ratio (EAR) Calculation**
-	- Uses the Euclidean distance between eye landmarks.
-	- EAR Formula:
-		EAR = (||p2-p6|| + ||p3-p5|| ) / 2*||p1-p4||
-	- If EAR < 0.25 (threshold), it means eyes are likely closed.
+
+- Uses the Euclidean distance between eye landmarks.
+- EAR Formula:
+  EAR = (||p2-p6|| + ||p3-p5|| ) / 2*||p1-p4||
+- If EAR < 0.25 (threshold), it means eyes are likely closed.
 
 **4. Alert Mechanism**
-	- Displays “DROWSINESS DETECTED” and “You are Sleeping Please Wake up!!” on the screen.
-	- Uses pyttsx3 to speak the warning aloud.
+
+- Displays “DROWSINESS DETECTED” and “You are Sleeping Please Wake up!!” on the screen.
+- Uses pyttsx3 to speak the warning aloud.
 
 **5. Exit Condition**
-	- Program runs until the user presses 'q'.
+
+- Program runs until the user presses 'q'.
 
 ### Key Libraries Used
 
