@@ -45,3 +45,30 @@ This project detects drowsiness in real-time using a webcam. It tracks the user�
 3. scipy → Euclidean distance for EAR.
 
 4. pyttsx3 → text-to-speech audio alert.
+
+### Requirements
+
+Install the following dependencies before running:
+
+##### pip install opencv-python dlib scipy pyttsx3
+
+### Download model file
+This project requires the pretrained dlib 68 face landmarks model.
+
+Download the file by searching
+### shape_predictor_68_face_landmarks.dat 
+in google
+
+Download the file and save it in your project folder, then run the project.
+
+### How to Run
+Run the script with :
+#### F5 
+or
+#### python drowsiness.py
+
+When drowsiness is detected:
+
+A red warning message is displayed.
+
+A voice alert is spoken: "You are Sleeping Please wake up!!"
